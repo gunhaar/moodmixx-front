@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=MuseoModerno:400,700');
+#root {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  /* background: linear-gradient(#fff, #999); */
+  background: url("../public/img/background3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+* {
+  user-select: none;
+}
+
+#root>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  /* overflow: hidden; */
+  font-family: "MuseoModerno", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.app>div {
+  /* font-family: "MuseoModerno", sans-serif; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row !important;
+}
+
+.row>* {
+  margin: 5px;
+}
+
+h1 {
+  font-family: "MuseoModerno", sans-serif;
+  color: #fff;
+  text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  mix-blend-mode: overlay
+}
+
+h2 {
+  color: #fff;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.cardContainer {
+  width: 100vw;
+  max-width: 300px;
+  height: 400px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 100vw;
+  max-width: 300px;
+  height: 400px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.30);
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+}
+
+.swipe:last-of-type {
+
+}
+
+.card h2 {
+  font-family: "MuseoModerno", sans-serif;
+  position: flex;
+  padding-top: 95%;
+  margin: 20px;
+  color: #fff;
+  text-align: left;
+  text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+.card p {
+  font-family: "MuseoModerno", sans-serif;
+  position: absolute;
+  bottom: 5px;
+  margin: 20px;
+  color: #fff;
+  text-align: left;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.infoText {
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  /* top: 14px; */
+  position: relative;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+
+.buttons {
+  font-family: "MuseoModerno", sans-serif;
+  padding-top: 5%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 625px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+.buttons button {
+  font-family: "MuseoModerno", sans-serif;
+  flex-shrink: 0;
+  padding: 10px;
+  top: 25px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #9198e5;
+  transition: 200ms;
+  margin: 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+}
+
+.login-button {
+  font-family: 'MuseoModerno', sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #9198e5;
+  transition: 200ms;
+  margin: 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+}
+
+.spotify-login-button {
+  background-color: #1DB954;
+  /* Spotify green */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  /* A rounder border might fit the logo better */
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MuseoModerno', sans-serif;
+  padding: 10px;
+    /* border-radius: 5px; */
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    /* background-color: #9198e5; */
+    transition: 200ms;
+    margin: 10px;
+    font-weight: bolder;
+    width: 180px;
+    /* box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10); */
+    cursor: pointer;
+}
+
+.spotify-login-button img {
+  height: 30px;
+  /* Adjust based on the size of your logo */
+  width: auto;
+  margin-right: 10px;
+  /* Adds some space between the logo and text */
+}
+
+.spotify-login-button:hover {
+  background-color: #1ED760;
+  /* A lighter Spotify green for hover effect */
+}
+
+.moodmixx-title {
+  font-family: 'MuseoModerno', sans-serif;
+  position: relative;
+  /* Adjust this depending on layout */
+  top: -20px;
+  /* Raise the text by 20px; adjust value as needed */
+}
+
+.play-button,
+.pause-button {
+  font-family: 'MuseoModerno', sans-serif; 
+  background-color: #9198e5;
+  /* Spotify green */
+  border: none;
+  top: 24px;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.play-button:hover,
+.pause-button:hover {
+  transform: scale(1.05);
+}
+
+/* Apply MuseoModerno font to the header */
+.header {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 24px;
+  /* or whatever size you prefer */
+  color: #fff;
+  /* Change color as needed */
+  text-align: center;
+  /* Center the text */
+  margin: 0;
+  /* Reset any default margins */
+  padding: 20px 0;
+  /* Add padding above and below the text */
+}
+
+@keyframes popup {
+  0%   { transform: scale(1,1) }
+  10%  { transform: scale(1.1,1.1) }
+  30%  { transform: scale(.9,.9) }
+  50%  { transform: scale(1,1) }
+  57%  { transform: scale(1,1) }
+  64%  { transform: scale(1,1) }
+  100% { transform: scale(1,1) }
+}
